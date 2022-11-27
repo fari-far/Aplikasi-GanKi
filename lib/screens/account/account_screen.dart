@@ -59,18 +59,24 @@ class AccountScreen extends StatelessWidget {
   }
 
   Widget logoutButton() {
+    var visualDensity;
     return Container(
       width: double.maxFinite,
       margin: EdgeInsets.symmetric(horizontal: 25),
-      child: RaisedButton(
-        visualDensity: VisualDensity.compact,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(18.0),
+      child:ElevatedButton(
+        style: ButtonStyle(
+          visualDensity: VisualDensity.compact,
+          shape: MaterialStateProperty.resolveWith<OutlinedBorder>((_) {
+            return RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18.0));
+          }),
+          backgroundColor: MaterialStateProperty.all<Color>(Color(0xffF2F3F2)),
+          textStyle: MaterialStateProperty.resolveWith<TextStyle>(
+              (states) => TextStyle(color: Colors.white)),
+          elevation: MaterialStateProperty.all<double>(0.0),
+          padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+              const EdgeInsets.symmetric(horizontal: 25, vertical: 24)),
         ),
-        color: Color(0xffF2F3F2),
-        textColor: Colors.white,
-        elevation: 0.0,
-        padding: EdgeInsets.symmetric(vertical: 24, horizontal: 25),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

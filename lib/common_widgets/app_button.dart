@@ -8,6 +8,7 @@ class AppButton extends StatelessWidget {
   final EdgeInsets padding;
   final Widget trailingWidget;
   final Function onPressed;
+  final VisualDensity visualDensity;
 
   const AppButton({
     Key key,
@@ -17,21 +18,27 @@ class AppButton extends StatelessWidget {
     this.padding = const EdgeInsets.symmetric(vertical: 24),
     this.trailingWidget,
     this.onPressed,
+    this.visualDensity
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.maxFinite,
-      child: RaisedButton(
-        visualDensity: VisualDensity.compact,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(roundness),
+      child: ElevatedButton(
+        style: ButtonStyle(
+          visualDensity: VisualDensity.compact,
+          shape: MaterialStateProperty.resolveWith<OutlinedBorder>((_) {
+            return RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(18.0));
+          }),
+          backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 18, 209, 18)),
+          textStyle: MaterialStateProperty.resolveWith<TextStyle>(
+              (states) => TextStyle(color: Colors.white)),
+          elevation: MaterialStateProperty.all<double>(0.0),
+          padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+              const EdgeInsets.symmetric(horizontal: 25, vertical: 24)),
         ),
-        color: AppColors.primaryColor,
-        textColor: Colors.white,
-        elevation: 0.0,
-        padding: padding,
         child: Stack(
           fit: StackFit.passthrough,
           children: <Widget>[
@@ -56,7 +63,6 @@ class AppButton extends StatelessWidget {
         onPressed: () {
           if (onPressed != null) onPressed();
         },
-      ),
-    );
+      ));
   }
 }
