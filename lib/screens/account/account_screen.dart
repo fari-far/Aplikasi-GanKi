@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:grocery_app/auth_service.dart';
 import 'package:grocery_app/common_widgets/app_text.dart';
 import 'package:grocery_app/helpers/column_with_seprator.dart';
 import 'package:grocery_app/styles/colors.dart';
@@ -22,16 +24,19 @@ class AccountScreen extends StatelessWidget {
               ListTile(
                 leading:
                     SizedBox(width: 65, height: 65, child: getImageHeader()),
-                title: AppText(
-                  text: "Mohammed Hashim",
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
+                title: Text(
+                  FirebaseAuth.instance.currentUser.displayName,
+                  style: const TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black87),
                 ),
-                subtitle: AppText(
-                  text: "github.com/mohammedhashim44",
-                  color: Color(0xff7C7C7C),
-                  fontWeight: FontWeight.normal,
-                  fontSize: 16,
+                subtitle: Text(
+                  FirebaseAuth.instance.currentUser.email,
+                  style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black87),
                 ),
               ),
               Column(
@@ -63,7 +68,7 @@ class AccountScreen extends StatelessWidget {
     return Container(
       width: double.maxFinite,
       margin: EdgeInsets.symmetric(horizontal: 25),
-      child:ElevatedButton(
+      child: ElevatedButton(
         style: ButtonStyle(
           visualDensity: VisualDensity.compact,
           shape: MaterialStateProperty.resolveWith<OutlinedBorder>((_) {
@@ -98,7 +103,9 @@ class AccountScreen extends StatelessWidget {
             Container()
           ],
         ),
-        onPressed: () {},
+        onPressed: () {
+          AuthService().signOut();
+        },
       ),
     );
   }

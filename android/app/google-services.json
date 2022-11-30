@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "993529509478",
+    "project_id": "project-mencoba-61b6f",
+    "storage_bucket": "project-mencoba-61b6f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:993529509478:android:8001623b7d8c1304909fa7",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "993529509478-fhcmutcgpbbtkg659es6des3s05c7i1v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlJfElcu-tZhtlNvxzxjo0qPIj3SNjAT4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "993529509478-fhcmutcgpbbtkg659es6des3s05c7i1v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:grocery_app/auth_service.dart';
 import 'package:grocery_app/common_widgets/app_button.dart';
 import 'package:grocery_app/common_widgets/app_text.dart';
 import 'package:grocery_app/screens/dashboard/dashboard_screen.dart';
@@ -91,16 +92,17 @@ class WelcomeScreen extends StatelessWidget {
       fontWeight: FontWeight.w600,
       padding: EdgeInsets.symmetric(vertical: 25),
       onPressed: () {
-        onGetStartedClicked(context);
+        AuthService().signInWithGoogle();
+        //onGetStartedClicked(context);
       },
     );
   }
 
-  void onGetStartedClicked(BuildContext context) {
-    Navigator.of(context).pushReplacement(new MaterialPageRoute(
-      builder: (BuildContext context) {
-        return DashboardScreen();
-      },
-    ));
-  }
+  //void onGetStartedClicked(BuildContext context) {
+  //Navigator.of(context).pushReplacement(new MaterialPageRoute(
+  //builder: (BuildContext context) {
+  //return DashboardScreen();
+  //},
+  //));
+  //}
 }

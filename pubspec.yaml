@@ -1,7 +1,7 @@
 name: grocery_app
 description: A new Flutter application.
 
-publish_to: 'none'
+publish_to: "none"
 
 version: 1.0.0+1
 
@@ -15,14 +15,15 @@ dependencies:
   cupertino_icons: ^1.0.0
   flutter_svg: ^1.0.3
   flutter_staggered_grid_view: 0.3.4
+  firebase_core: ^2.1.1
+  firebase_auth: ^4.1.1
+  google_sign_in: ^5.4.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-
 flutter:
-
   uses-material-design: true
 
   assets:
