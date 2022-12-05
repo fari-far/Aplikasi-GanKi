@@ -38,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(
                     height: 25,
                   ),
-                  padded(subTitle("Exclusive Order")),
+                  padded(subTitle("Limited Edition")),
                   getHorizontalItemSlider(exclusiveOffers),
                   SizedBox(
                     height: 15,
@@ -48,7 +48,7 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(
                     height: 15,
                   ),
-                  padded(subTitle("Groceries")),
+                  padded(subTitle("Categry")),
                   SizedBox(
                     height: 15,
                   ),
