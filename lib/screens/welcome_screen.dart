@@ -8,7 +8,7 @@ import 'package:grocery_app/styles/colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  final String imagePath = "assets/images/welcome_image.png";
+  final String imagePath = "assets/images/welcome.png";
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,6 @@ class WelcomeScreen extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Spacer(),
-                icon(),
                 SizedBox(
                   height: 20,
                 ),
@@ -35,7 +34,6 @@ class WelcomeScreen extends StatelessWidget {
                 SizedBox(
                   height: 10,
                 ),
-                sloganText(),
                 SizedBox(
                   height: 40,
                 ),
@@ -49,40 +47,24 @@ class WelcomeScreen extends StatelessWidget {
         ));
   }
 
-  Widget icon() {
-    String iconPath = "assets/icons/app_icon.svg";
-    return SvgPicture.asset(
-      iconPath,
-      width: 48,
-      height: 56,
-    );
-  }
-
   Widget welcomeTextWidget() {
     return Column(
       children: [
         AppText(
           text: "Welcome",
+          textAlign: TextAlign.right,
           fontSize: 48,
           fontWeight: FontWeight.w600,
-          color: Colors.white,
+          color: Color.fromARGB(255, 85, 73, 32),
         ),
         AppText(
-          text: "to our store",
+          text: "Discover Your Own Keychain!",
           fontSize: 48,
+          textAlign: TextAlign.right,
           fontWeight: FontWeight.w600,
-          color: Colors.white,
+          color: Color.fromARGB(255, 85, 73, 32),
         ),
       ],
-    );
-  }
-
-  Widget sloganText() {
-    return AppText(
-      text: "Get your grecories as fast as in hour",
-      fontSize: 16,
-      fontWeight: FontWeight.w600,
-      color: Color(0xffFCFCFC).withOpacity(0.7),
     );
   }
 

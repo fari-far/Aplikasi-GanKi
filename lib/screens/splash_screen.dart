@@ -31,16 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.primaryColor,
-      body: Center(
-        child: splashScreenIcon(),
-      ),
+      body: Center(),
     );
   }
-}
-
-Widget splashScreenIcon() {
-  String iconPath = "assets/icons/splash_screen_icon.svg";
-  return SvgPicture.asset(
-    iconPath,
-  );
 }
