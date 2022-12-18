@@ -66,11 +66,6 @@ class _ChartItemWidgetState extends State<ChartItemWidget> {
             ),
             Column(
               children: [
-                Icon(
-                  Icons.close,
-                  color: AppColors.darkGrey,
-                  size: 25,
-                ),
                 Spacer(
                   flex: 5,
                 ),
