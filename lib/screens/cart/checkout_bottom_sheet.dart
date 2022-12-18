@@ -50,7 +50,7 @@ class _CheckoutBottomSheetState extends State<CheckoutBottomSheet> {
           getDivider(),
           checkoutRow("Promo Code", trailingText: "Pick Discount"),
           getDivider(),
-          checkoutRow("Total Cost", trailingText: "\$13.97"),
+          checkoutRow("Total Cost", trailingText: "Rp 50.000"),
           getDivider(),
           SizedBox(
             height: 30,

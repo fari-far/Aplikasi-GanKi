@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:grocery_app/screens/welcome_screen.dart';
 import 'package:grocery_app/styles/colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/widgets.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -31,7 +32,13 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.primaryColor,
-      body: Center(),
+      body: Center(
+        child: Image(
+          image: AssetImage('assets/images/logo-trans.png'),
+          width: 200,
+          height: 200,
+        ),
+      ),
     );
   }
 }

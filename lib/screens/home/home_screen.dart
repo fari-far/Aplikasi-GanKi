@@ -20,9 +20,9 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 15,
+                    height: 10,
                   ),
-                  SvgPicture.asset("assets/icons/app_icon_color.svg"),
+                  SvgPicture.asset("assets/images/logo-trans.svg"),
                   SizedBox(
                     height: 5,
                   ),
@@ -171,7 +171,7 @@ class HomeScreen extends StatelessWidget {
           width: 8,
         ),
         Text(
-          "Khartoum,Sudan",
+          "Surabaya,Indonesia",
           style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         )
       ],

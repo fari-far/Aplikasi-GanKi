@@ -61,7 +61,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         ),
                         Spacer(),
                         Text(
-                          "\$${getTotalPrice().toStringAsFixed(2)}",
+                          "\Rp ${getTotalPrice().toStringAsFixed(0)}",
                           style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
@@ -72,9 +72,6 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                     Spacer(),
                     Divider(thickness: 1),
                     getProductDataRowWidget("Product Details"),
-                    Divider(thickness: 1),
-                    getProductDataRowWidget("Nutritions",
-                        customWidget: nutritionWidget()),
                     Divider(thickness: 1),
                     getProductDataRowWidget(
                       "Review",
@@ -149,22 +146,6 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             size: 20,
           )
         ],
-      ),
-    );
-  }
-
-  Widget nutritionWidget() {
-    return Container(
-      padding: EdgeInsets.all(5),
-      decoration: BoxDecoration(
-        color: Color(0xffEBEBEB),
-        borderRadius: BorderRadius.circular(5),
-      ),
-      child: AppText(
-        text: "100gm",
-        fontWeight: FontWeight.w600,
-        fontSize: 12,
-        color: Color(0xff7C7C7C),
       ),
     );
   }

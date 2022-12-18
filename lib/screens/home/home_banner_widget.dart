@@ -20,7 +20,7 @@ class HomeBanner extends StatelessWidget {
           Container(
             padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
             child: Image.asset(
-              "assets/images/banner_image.png",
+              "assets/images/pemandangan.png",
             ),
           ),
           Spacer(),
@@ -28,13 +28,13 @@ class HomeBanner extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               AppText(
-                text: "Fresh Vegetables",
-                fontSize: 22,
+                text: "GanKi Pemandangan",
+                fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
               AppText(
-                text: "Get Up To 40%  OFF",
-                fontSize: 16,
+                text: "Dapatkan diskon up to 60%",
+                fontSize: 14,
                 fontWeight: FontWeight.w600,
                 color: AppColors.primaryColor,
               ),
